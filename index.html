@@ -1,18 +1,291 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Trabajo DGT</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+                 
+    <div class="jumbotron jumbotron-fluid" style="background-color:#aff1ee; text-align: center;">
+        <div class="container">
+          <h1  class="display-4">DGT</h1>
+          <p class="lead">Alejandro Álvaro Ezequiel Domingo</p>
+        </div>
+    </div>
+
+    <!--Barra nav-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 mt-3 mb-2 pb-2">
+    <img src="logo.png" width="70" height="70" class="d-inline-block align-top" alt="">
+      Trabajo DGT
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--CONDUCTOR-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Conductor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" type="button" onclick='mostrar("#formConductor")'>Añadir</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" type="button" id="listadoConductor"
+                          >Listado</a>
+                </div>
+           </li>
+           <!--Guardia Civil-->
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Guardia Civil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item" type="button" onclick='mostrar("#formGuardia")'>Añadir</a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item" type="button" id="listadoGuardia"
+                      >Listado</a>
+            </div>
+          </li>
+         
+           <!--Multas-->
+          <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Multas
+              </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" type="button" onclick='mostrar("#formMulta")'>Añadir</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" type="button" id="listadoMulta"
+               >Listado</a>
+              </div>
+         </li>
+
+         <!--PAgosMulta-->
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Pagos
+             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" type="button" onclick='mostrar("#formPago")'>Añadir</a>
+             <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoPagosMulta"
+              >Listado</a>
+             </div>
+        </li>
+
+        <!--Listados Varios-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Listados
+             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" type="button" id="listadoSaldoConductor" >Listado Saldo Conductor</a>
+             <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoPuntosConductor"
+              >Listado Puntos Conductor</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoMultasGuardia"
+              >Listado Multas Guardia</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" type="button" id="listadoMultasFecha"
+              >Listado Multas Fecha</a>
+             </div>
+        </li>
+         <!--IMPRIMIR-->
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Imprimir
+               </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" type="button" onclick='mostrar()'>Imprimir</a>
+               <div class="dropdown-divider"></div>
+                
+               </div>
+          </li>
+          
 
 
-<p>Holaaaaa
+        </ul>    
+    </div> 
     
-</p>
+    <!--Formularios-->
+   <!--Formulario Conductor-->
+    <div id="divFrmAltaConductor" class="container col-6 ">
+    <form action="" name="formConductor" class="m-2" id="formConductor">
+        <div class="form-group row">
+          <label for="txtNif" class="col-4 col-form-label">NIF:</label> 
+          <div class="col-8">
+            <input id="txtNif" name="txtNif" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtNombre" class="col-4 col-form-label">Nombre:</label> 
+          <div class="col-8">
+            <input id="txtNombre" name="txtNombre" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtApellido" class="col-4 col-form-label">Apellido:</label> 
+          <div class="col-8">
+            <input id="txtApellido" name="txtApellido" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtDireccion" class="col-4 col-form-label">Direccion:</label> 
+          <div class="col-8">
+            <input id="txtDireccion" name="txtDireccion" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtCaducidad" class="col-4 col-form-label">Caducidad Carnet:</label> 
+          <div class="col-8">
+            <input id="txtCaducidad" name="txtCaducidad" type="text" class="form-control">
+          </div>
+        </div> 
+        <div class="form-group row">
+          <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">Añadir</button>
+          </div>
+        </div>
+      </form>
+      </div>
+
+      <!--Formulario Guardia CIvil-->
+      <div id="divFrmAltaGuardia" class="container col-6 ">
+        <form action="" name="formGuardia" class="m-2" id="formGuardia">
+            <div class="form-group row">
+              <label for="txtNifGuardia" class="col-4 col-form-label">NIF:</label> 
+              <div class="col-8">
+                <input id="txtNifGuardia" name="txtNifGuardia" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtNombreGuardia" class="col-4 col-form-label">Nombre:</label> 
+              <div class="col-8">
+                <input id="txtNombreGuardia" name="txtNombreGuardia" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtApellidoGuardia" class="col-4 col-form-label">Apellido:</label> 
+              <div class="col-8">
+                <input id="txtApellidoGuardia" name="txtApellidoGuardia" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtPuesto" class="col-4 col-form-label">Puesto:</label> 
+              <div class="col-8">
+                <input id="txtPuesto" name="txtPuesto" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="txtNumMultas" class="col-4 col-form-label">Nº de multas:</label> 
+              <div class="col-8">
+                <input id="txtNumMultas" name="txtNumMultas" type="text" class="form-control">
+              </div>
+            </div> 
+            <div class="form-group row">
+              <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Añadir</button>
+              </div>
+            </div>
+          </form>
+          </div>
+
+          <!--Formulario Multas-->
+
+          <div id="divFrmMulta" class="container col-6 ">
+
+            <form action="" name="formMulta" class="m-2" id="formMulta">
+                <div class="form-group row">
+                  <label for="txtIdMulta" class="col-4 col-form-label">ID Multa:</label> 
+                  <div class="col-8">
+                    <input id="txtIdMulta" name="txtIdMulta" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="txtNifConductor" class="col-4 col-form-label">NIF Conductor:</label> 
+                  <div class="col-8">
+                    <input id="txtNifConductor" name="txtNifConductor" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="txtNifGuardia" class="col-4 col-form-label">NIF Guardia:</label> 
+                  <div class="col-8">
+                    <input id="txtNifGuardia" name="txtNifGuardia" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="txtImporte" class="col-4 col-form-label">Importe:</label> 
+                  <div class="col-8">
+                    <input id="txtImporte" name="txtImporte" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-4 col-form-label">Pago:</label> 
+                  <div class="col-8">
+                    <div class="custom-controls-stacked">
+                      <div class="custom-control custom-radio">
+                        <input name="radioPagada" id="radioPagada_0" type="radio" class="custom-control-input" value="pagada"> 
+                        <label for="radioPagada_0" class="custom-control-label">Pagada</label>
+                      </div>
+                    </div>
+                    <div class="custom-controls-stacked">
+                      <div class="custom-control custom-radio">
+                        <input name="radioPagada" id="radioPagada_1" type="radio" class="custom-control-input" value="noPagada"> 
+                        <label for="radioPagada_1" class="custom-control-label">No pagada</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="txtDescripcion" class="col-4 col-form-label">Descripción:</label> 
+                  <div class="col-8">
+                    <input id="txtDescripcion" name="txtDescripcion" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="txtFecha" class="col-4 col-form-label">Fecha:</label> 
+                  <div class="col-8">
+                    <input id="txtFecha" name="txtFecha" type="text" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group row">
+                  <div class="offset-4 col-8">
+                    <button name="submit" type="submit" class="btn btn-primary">Añadir</button>
+                  </div>
+                </div>
+              </form>
+              </div>
+
+
+
+      
+
+
+   
+    
+
+   
+
+
 
 
 
 
     
 </body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="objeto.js"></script>
+<script src="codigo.js"></script>
 </html>
