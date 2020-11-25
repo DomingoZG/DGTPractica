@@ -1,0 +1,137 @@
+"use strict";
+// Clase Persona
+function Persona(sNif, sNombre, sApellidos, sDireccion){
+    this.nif = sNif;
+    this.nombre = sNombre;
+    this.apellidos = sApellidos;
+    this.direccion = sDireccion;
+}
+
+/*
+Persona.prototype.toHTMLRow = function (){
+    let sFila = "<tr>";
+    sFila += "<td>" + this.nif + "</td>";
+    sFila += "<td>" + this.nombre + "</td>";
+    sFila += "<td>" + this.apellidos + "</td>";
+    sFila += "<td>" + this.direccion + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
+}
+*/
+
+// Clase Conductor
+function Conductor(dCadCarnet){
+    Persona.call(this,sNif,sNombre,sApellidos,sDireccion);
+	this.cadCarnet = dCadCarnet;
+}
+
+if (Object.create){
+    Conductor.prototype = Object.create(Persona.prototype);
+    Conductor.prototype.constructor = Conductor;
+}
+else {
+	Conductor.prototype = new Persona();   // Forma antigua
+}
+
+// Clase GuardiaCivil
+function GuardiaCivil(sPuesto){
+    Persona.call(this,sNif,sNombre,sApellidos,sDireccion); 
+	this.puesto = sPuesto;
+}
+
+if (Object.create){
+    GuardiaCivil.prototype = Object.create(Persona.prototype);
+    GuardiaCivil.prototype.constructor = GuardiaCivil;
+}
+else {
+	GuardiaCivil.prototype = new Persona();   // Forma antigua
+} 
+
+// Clase Multa
+class Multa{
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha){
+    this.idMulta = iIdMulta;
+    this.nifConductor = sNifConductor;
+    this.nifGuardia = sNifGuardia;
+    this.importe = fImporte;
+    this.pagada = bPagada;
+    this.descripcion = sDescripcion;
+    this.fecha = dFecha;
+    }
+        /*
+    get idMulta(){
+        return this.idMulta;
+    }
+    
+    set idMulta(){
+        this.idMulta = iIdMulta;
+    }
+
+    get nifConductor(){
+        return this.nifConductor;
+    }
+    
+    set nifConductor(){
+        this.nifConductor = sNifConductor;
+    }
+
+    get nifGuardia(){
+        return this.nifGuardia;
+    }
+    
+    set nifGuardia(){
+        this.nifGuardia = sNifGuardia;
+    }
+
+    get importe(){
+        return this.importe;
+    }
+    
+    set importe(){
+        this.importe = fimporte;
+    }
+
+    get pagada(){
+        return this.pagada;
+    }
+    
+    set pagada(){
+        this.pagada = bpagada;
+    }
+
+    get descripcion(){
+        return this.descripcion;
+    }
+    
+    set descripcion(){
+        this.descripcion = sDescripcion;
+    }
+
+    get fecha(){
+        return this.fecha;
+    }
+    
+    set fecha(){
+        this.fecha = dFecha;
+    }
+        */
+}
+
+// Clase Grave
+class Grave extends Multa{
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha,iPuntos){
+        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha)
+        this.puntos = this.iPuntos;
+    }
+	
+}
+// Clase Leve
+class Leve extends Multa{
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha,bBonificada){
+        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha);
+        this.bonificada = bBonificada;
+    }
+    
+	
+}
