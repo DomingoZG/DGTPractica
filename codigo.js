@@ -23,3 +23,4 @@ function ocultar()
   */
 
   alert("Probando");
+  alert("eyyy");
