@@ -1,4 +1,4 @@
-
+'use strict';
 
 
 /* MOSTRAR LOS FORMULARIOS */
@@ -21,3 +21,5 @@ function ocultar()
     document.querySelector(x).style.display = "block";
   }
   */
+
+  alert("Probando");
