@@ -37,6 +37,7 @@ function añadeConductor(){
  
  
   dgt.comprobarConductor(conductor);
+  formConductor.reset();
 }
 /*
 function ocultar() 
