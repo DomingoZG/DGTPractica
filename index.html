@@ -38,8 +38,15 @@
           <li class="nav-item">
             <a class="nav-link" onclick=altaGuardiaCivil();>Guardia Civil </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" onclick=altaMulta();>Multa </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Multa
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" onclick=altaMulta();>Registrar multa </a>
+              <a class="dropdown-item" href="#">Pagar multa</a>
+              <a class="dropdown-item" href="#">Imprimir multa </a>        
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,6 +67,9 @@
 
       </div>
     </nav>
+
+    
+
     
     <!--Formularios-->
    <!--Formulario Conductor-->
