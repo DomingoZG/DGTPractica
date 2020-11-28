@@ -87,17 +87,15 @@ class Dgt {
          this.personas.push(cond);
      }
 
-    comprobarConductor(per){
+    comprobarConductor(cond){
 
         let existe = false;
 
         if(this.personas.length==0){
-            this.personas.push(per);
-            existe = true;
             return existe;
         }else{
         this.personas.forEach(element => {
-            if(element.nif==per.nif)
+            if(element.nif==cond.nif)
                 existe = true;
             });
         }
