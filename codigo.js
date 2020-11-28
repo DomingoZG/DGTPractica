@@ -60,6 +60,7 @@ function añadeGuardia(){
  
  
   dgt.comprobarGuardia(guardia);
+
   if(dgt.comprobarGuardia(guardia)){
     alert("Ya existe");
   }else{
