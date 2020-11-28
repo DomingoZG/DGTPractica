@@ -1,6 +1,6 @@
 'use strict';
 
-let dgt = new Dgt();
+var dgt = new Dgt();
 /* MOSTRAR LOS FORMULARIOS */
 
 function altaConductor() {

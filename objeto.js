@@ -32,7 +32,7 @@ if (Object.create){
     Conductor.prototype.constructor = Conductor;
 }
 else {
-	Conductor.prototype = new Persona();   // Forma antigua
+    Conductor.prototype = new Persona();   // Forma antigua
 }
 
 Conductor.prototype.toHTMLRow = function (){
@@ -43,9 +43,12 @@ Conductor.prototype.toHTMLRow = function (){
     sFila += "<td>" + this.direccion + "</td>";
     sFila += "<td>" + this.cadCarnet + "</td>";
     sFila += "</tr>";
-
+    
     return sFila;
 }
+
+
+
 
 // Clase GuardiaCivil
 function GuardiaCivil(sPuesto){
@@ -58,7 +61,7 @@ if (Object.create){
     GuardiaCivil.prototype.constructor = GuardiaCivil;
 }
 else {
-	GuardiaCivil.prototype = new Persona();   // Forma antigua
+    GuardiaCivil.prototype = new Persona();   // Forma antigua
 } 
 
 GuardiaCivil.prototype.toHTMLRow = function (){
@@ -79,6 +82,17 @@ class Dgt {
       this.personas = new Array;
       this.multas = [];
     }
+    _buscarConductor(dni){
+
+        let oConductorExistente = null;
+    
+        //oProductoExistente =  this.productos.find(function(oProducto){ 
+        //     return oProducto.codigo == iCodigo;});
+        oConductorExistente =  this.personas.find( conductores => conductores.sNif == dni);
+        alert(oConductorExistente);
+         return oConductorExistente;
+    
+     }
 
     comprobarConductor(per){
 
