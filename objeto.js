@@ -132,6 +132,7 @@ class Dgt {
 
     // Encabezado de la tabla
     sTabla += "<thead class='thead-dark'><tr>";
+    
     sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
     sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
     sTabla += "<th scope='col'>Caducidad</th>";
