@@ -71,16 +71,9 @@ function añadeGuardia(){
   formGuardia.reset();
 }
 
-<<<<<<< Updated upstream
 function mostrarTabla()
 {
-  let sLIstado = dgt.comprobarConductor();
-=======
-
-
-function mostrarTabla(){
-  let sListado = dgt.productosPorCodigo();
->>>>>>> Stashed changes
+  let sListado = dgt.comprobarConductor();
   let oVentana = open();
    oVentana.document.body,innerHTML=sListado;
 
