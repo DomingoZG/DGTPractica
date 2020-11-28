@@ -82,7 +82,7 @@ class Dgt {
       this.personas = new Array;
       this.multas = [];
     }
-    _buscarConductor(dni){
+    /*_buscarConductor(dni){
 
         let oConductorExistente = null;
     
@@ -92,24 +92,28 @@ class Dgt {
         alert(oConductorExistente);
          return oConductorExistente;
     
+     }*/
+
+     sumaConductor(cond){
+         this.personas.push(cond);
      }
 
     comprobarConductor(per){
 
+        let existe = false;
+
         if(this.personas.length==0){
             this.personas.push(per);
-            alert("creado");
-        }
-        else{
+            existe = true;
+            return existe;
+        }else{
         this.personas.forEach(element => {
             if(element.nif==per.nif)
-                alert("Ya existe");
-                else{
-                    this.personas.push(per);
-                    alert("creado");
-                }
+                existe = true;
             });
         }
+
+        return existe;
     }
 }
 

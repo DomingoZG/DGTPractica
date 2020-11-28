@@ -36,7 +36,12 @@ function añadeConductor(){
   let conductor = new Conductor(nif, nombre, apellido, direccion, cadCarnet);
  
  
-  dgt.comprobarConductor(conductor);
+  if(dgt.comprobarConductor(conductor)){
+    alert("Ya existe");
+  }else{
+    dgt.sumaConductor(conductor);
+    alert("Creado");
+  }
 }
 /*
 function ocultar() 
