@@ -73,9 +73,9 @@ function añadeGuardia(){
 
 function mostrarTabla()
 {
-  let sLIstado = dgt.comprobarConductor();
+  let sListado = dgt.listadoConductor();
   let oVentana = open();
-   oVentana.document.body,innerHTML=sListado;
+   oVentana.document.body.innerHTML=sListado;
 
    
 
