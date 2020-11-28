@@ -71,18 +71,9 @@ function añadeGuardia(){
   formGuardia.reset();
 }
 
-
-<<<<<<< HEAD
 function mostrarTabla()
-=======
-
-
-
-/*
-function ocultar() 
->>>>>>> af7444027c46e12c43aa7d31a188905798c3004b
 {
-  let sListado= dgt.productosPorCodigo();
+  let sLIstado = dgt.comprobarConductor();
   let oVentana = open();
    oVentana.document.body,innerHTML=sListado;
 
