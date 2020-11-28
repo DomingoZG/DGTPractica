@@ -7,7 +7,7 @@ function Persona(sNif, sNombre, sApellidos, sDireccion){
     this.direccion = sDireccion;
 }
 
-/*
+/* toHTMLRow de Persona
 Persona.prototype.toHTMLRow = function (){
     let sFila = "<tr>";
     sFila += "<td>" + this.nif + "</td>";
