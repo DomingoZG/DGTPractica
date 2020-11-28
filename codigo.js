@@ -35,15 +35,39 @@ function añadeConductor(){
  
   let conductor = new Conductor(nif, nombre, apellido, direccion, cadCarnet);
  
- 
+  //Compruebo Conductor en DGT
   dgt.comprobarConductor(conductor);
+
   if(dgt.comprobarConductor(conductor)){
     alert("Ya existe");
   }else{
     dgt.sumaConductor(conductor);
     alert("Creado");
   }
+  //Limpio el formulario
   formConductor.reset();
+}
+
+function añadeGuardia(){
+  
+  let nif = document.getElementById("txtNifGuardia").value;
+  let nombre = document.getElementById("txtNombreGuardia").value;
+  let apellido = document.getElementById("txtApellidoGuardia").value;
+  let puesto = document.getElementById("txtPuesto").value;
+  let direccion = document.getElementById("txtDireccion").value;
+ 
+  let guardia = new GuardiaCivil(nif, nombre, apellido, puesto, direccion);
+ 
+ 
+  dgt.comprobarGuardia(guardia);
+  if(dgt.comprobarGuardia(guardia)){
+    alert("Ya existe");
+  }else{
+    dgt.sumaGuardia(guardia);
+    alert("Creado");
+  }
+  
+  formGuardia.reset();
 }
 /*
 function ocultar() 

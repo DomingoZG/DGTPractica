@@ -51,7 +51,7 @@ Conductor.prototype.toHTMLRow = function (){
 
 
 // Clase GuardiaCivil
-function GuardiaCivil(sPuesto){
+function GuardiaCivil(sNif, sNombre, sApellidos, sDireccion, sPuesto){
     Persona.call(this,sNif,sNombre,sApellidos,sDireccion); 
 	this.puesto = sPuesto;
 }
@@ -82,18 +82,7 @@ class Dgt {
       this.personas = new Array;
       this.multas = [];
     }
-    /*_buscarConductor(dni){
-
-        let oConductorExistente = null;
-    
-        //oProductoExistente =  this.productos.find(function(oProducto){ 
-        //     return oProducto.codigo == iCodigo;});
-        oConductorExistente =  this.personas.find( conductores => conductores.sNif == dni);
-        alert(oConductorExistente);
-         return oConductorExistente;
-    
-     }*/
-
+  
      sumaConductor(cond){
          this.personas.push(cond);
      }
@@ -115,6 +104,31 @@ class Dgt {
 
         return existe;
     }
+
+    sumaGuardia(guardia){
+        this.personas.push(guardia);
+    }
+
+   comprobarGuardia(per){
+
+       let existe = false;
+
+       if(this.personas.length==0){
+           this.personas.push(per);
+           existe = true;
+           return existe;
+       }else{
+       this.personas.forEach(element => {
+           if(element.nif==per.nif)
+               existe = true;
+           });
+       }
+
+       return existe;
+   }
+
+
+
 }
 
 // Clase Multa
