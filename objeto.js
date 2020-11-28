@@ -126,7 +126,7 @@ class Dgt {
    }
 
    
-   listadoConductor(opcion){
+   listadoConductor(){
 
     let sTabla = "<table border='1'  class='table'>";    
 
