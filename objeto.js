@@ -126,7 +126,7 @@ class Dgt {
    }
 
    
-   productosPorCodigo(){
+   listadoConductor(){
 
     let sTabla = "<table border='1' class='table'>";    
 
@@ -146,7 +146,7 @@ class Dgt {
         // Obtenemos array ordenado por código de producto
         //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
-    for (let oP of personas)
+    for (let oP of dgt.personas)
     {
         sTabla += oP.toHTMLRow();
     }
