@@ -80,6 +80,7 @@ class Dgt {
     }
 
     comprobarConductor(per){
+        console.log(personas);
         personas.forEach(element => {
             if(element.nif==per.nif)
                 alert("Ya existe")
