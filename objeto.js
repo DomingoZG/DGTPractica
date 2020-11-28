@@ -82,12 +82,12 @@ class Dgt {
 
 // Clase Multa
 class Multa{
-    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha){
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, sDescripcion, dFecha){
     this.idMulta = iIdMulta;
     this.nifConductor = sNifConductor;
     this.nifGuardia = sNifGuardia;
     this.importe = fImporte;
-    this.pagada = bPagada;
+    this.pagada = false;
     this.descripcion = sDescripcion;
     this.fecha = dFecha;
     }
@@ -106,7 +106,7 @@ class Multa{
     }
 
     
-        /*
+        
     get idMulta(){
         return this.idMulta;
     }
@@ -144,7 +144,7 @@ class Multa{
     }
     
     set pagada(){
-        this.pagada = bpagada;
+        this.pagada = true;
     }
 
     get descripcion(){
@@ -162,14 +162,14 @@ class Multa{
     set fecha(){
         this.fecha = dFecha;
     }
-        */
+        
     }
 
 // Clase Grave
 class Grave extends Multa{
     constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha, iPuntos){
         super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha)
-        this.puntos = this.iPuntos;
+        this.puntos = iPuntos;
     }
 
     toHTMLRow(){
