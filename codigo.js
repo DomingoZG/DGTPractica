@@ -70,23 +70,14 @@ function añadeGuardia(){
   
   formGuardia.reset();
 }
-/*
-function ocultar() 
-{
-    let divConjunto = document
-      .querySelector("#divTotal")
-      .querySelectorAll(".divHijo");
-      divConjunto.forEach(value =>
-         {
-      let x = value;
-      x.style.display = "none";
-    });
-  }
-  
-  function mostrar(x) 
-  {
-    ocultar();
-    document.querySelector(x).style.display = "block";
-  }
-  */
 
+
+function mostrarTabla()
+{
+  let sListado= dgt.productosPorCodigo();
+  let oVentana = open();
+   oVentana.document.body,innerHTML=sListado;
+
+   
+
+}

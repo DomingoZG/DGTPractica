@@ -80,7 +80,7 @@ GuardiaCivil.prototype.toHTMLRow = function (){
 class Dgt {
     constructor() {
       this.personas = new Array;
-      this.multas = [];
+      this.multas = new Array;
     }
   
      sumaConductor(cond){
@@ -132,20 +132,22 @@ class Dgt {
 
     // Encabezado de la tabla
     sTabla += "<thead class='thead-light'><tr>";
-    sTabla += "<th scope='col'>Código</th><th scope='col'>Nombre</th>";
-    sTabla += "<th scope='col'>Precio</th><th scope='col'>Unidades</th>";
+    sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
+    sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
+    sTabla += "<th scope='col'>Caducidad</th>";
     sTabla += "</tr></thead>";
 
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
 
     // Obtenemos array que no tiene productos con 0 unidades
-    let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
+    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
 
         // Obtenemos array ordenado por código de producto
-        oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
+        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
-    for (let oP of oProductosAux){
+    for (let oP of personas)
+    {
         sTabla += oP.toHTMLRow();
     }
 
