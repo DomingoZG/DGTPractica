@@ -131,7 +131,7 @@ class Dgt {
     let sTabla = "<table border='1'  class='table'>";    
 
     // Encabezado de la tabla
-    sTabla += "<thead class='thead-light'><tr>";
+    sTabla += "<thead class='thead-dark'><tr>";
     sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
     sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
     sTabla += "<th scope='col'>Caducidad</th>";
