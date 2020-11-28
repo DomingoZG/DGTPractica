@@ -21,106 +21,32 @@
     </div>
 
     <!--Barra nav-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 mt-3 mb-2 pb-2">
-    <img src="logo.png" width="70" height="70" class="d-inline-block align-top" alt="">
-      Trabajo DGT
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <!--CONDUCTOR-->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-                     data-toggle="dropdown" aria-haspopup="true" onclick="altaConducto()" aria-expanded="false">
-                     Conductor
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" type="button" >Añadir</a>
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" type="button" id="listadoConductor"
-                          >Listado</a>
-                </div>
-           </li>
-           <!--Guardia Civil-->
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Guardia Civil
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" type="button" onclick='mostrar("#formGuardia")'>Añadir</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" type="button" id="listadoGuardia"
-                      >Listado</a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li onclick="altaRemesa();"><a href="#">Alta de remesa</a></li>
+                            <li onclick="salidaRemesa();"><a href="#">Salida de remesa</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listados<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li onclick="listadoBasico();"><a href="#">Listado de productos básico</a></li>
+                            <li onclick="listadoOrdenado();"><a href="#">Listado de productos ordenados por código</a></li>
+                            <li onclick="listadoPorValor();"><a href="#">Listado de productos ordenados por valor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
             </div>
-          </li>
-         
-           <!--Multas-->
-          <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Multas
-              </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" type="button" onclick='mostrar("#formMulta")'>Añadir</a>
-              <div class="dropdown-divider"></div>
-               <a class="dropdown-item" type="button" id="listadoMulta"
-               >Listado</a>
-              </div>
-         </li>
-
-         <!--PAgosMulta-->
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Pagos
-             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" type="button" onclick='mostrar("#formPago")'>Añadir</a>
-             <div class="dropdown-divider"></div>
-              <a class="dropdown-item" type="button" id="listadoPagosMulta"
-              >Listado</a>
-             </div>
-        </li>
-
-        <!--Listados Varios-->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Listados
-             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" type="button" id="listadoSaldoConductor" >Listado Saldo Conductor</a>
-             <div class="dropdown-divider"></div>
-              <a class="dropdown-item" type="button" id="listadoPuntosConductor"
-              >Listado Puntos Conductor</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" type="button" id="listadoMultasGuardia"
-              >Listado Multas Guardia</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" type="button" id="listadoMultasFecha"
-              >Listado Multas Fecha</a>
-             </div>
-        </li>
-         <!--IMPRIMIR-->
-         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" type="button" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Imprimir
-               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" type="button" onclick='mostrar()'>Imprimir</a>
-               <div class="dropdown-divider"></div>
-                
-               </div>
-          </li>
-          
-
-
-        </ul>    
-    </div> 
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
     
     <!--Formularios-->
