@@ -78,6 +78,16 @@ class Dgt {
       this.personas = [];
       this.multas = [];
     }
+
+    comprobarConductor(per){
+        personas.forEach(element => {
+            if(element.nif==per.nif)
+                alert("Ya existe")
+                else{
+                this.personas.push(per);
+                alert("Se ha creado")}
+        });
+    }
 }
 
 // Clase Multa
@@ -106,7 +116,7 @@ class Multa{
     }
 
     
-        
+      /*
     get idMulta(){
         return this.idMulta;
     }
@@ -162,7 +172,7 @@ class Multa{
     set fecha(){
         this.fecha = dFecha;
     }
-        
+        */
     }
 
 // Clase Grave
