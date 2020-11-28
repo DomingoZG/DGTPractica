@@ -2,6 +2,14 @@
 
 
 /* MOSTRAR LOS FORMULARIOS */
+
+function altaConductor() {
+    divFrmMulta.style.display = "block";
+    divFrmAltaGuardia.style.display = "none";
+    divFrmAltaConductor.style.display = "none";
+    // divListadoOrdenado.style.display = "none";
+
+}
 /*
 function ocultar() 
 {
