@@ -21,7 +21,7 @@ Persona.prototype.toHTMLRow = function (){
 
 
 // Clase Conductor
-function Conductor(dCadCarnet){
+function Conductor(sNif,sNombre,sApellidos,sDireccion,dCadCarnet){
     Persona.call(sNif,sNombre,sApellidos,sDireccion);
 	this.cadCarnet = dCadCarnet;
 }
