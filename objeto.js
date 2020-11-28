@@ -125,6 +125,34 @@ class Dgt {
        return existe;
    }
 
+   
+   productosPorCodigo(){
+
+    let sTabla = "<table border='1' class='table'>";    
+
+    // Encabezado de la tabla
+    sTabla += "<thead class='thead-light'><tr>";
+    sTabla += "<th scope='col'>Código</th><th scope='col'>Nombre</th>";
+    sTabla += "<th scope='col'>Precio</th><th scope='col'>Unidades</th>";
+    sTabla += "</tr></thead>";
+
+    // Contenido de la tabla
+    sTabla += "<tbody scope='row'>";
+
+    // Obtenemos array que no tiene productos con 0 unidades
+    let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
+
+        // Obtenemos array ordenado por código de producto
+        oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
+    
+    for (let oP of oProductosAux){
+        sTabla += oP.toHTMLRow();
+    }
+
+    sTabla += "</tbody>";
+
+    return sTabla;
+}
 
 
 }
