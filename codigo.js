@@ -70,6 +70,11 @@ function añadeGuardia(){
   
   formGuardia.reset();
 }
+
+
+
+
+
 /*
 function ocultar() 
 {
