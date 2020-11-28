@@ -5,6 +5,7 @@ function Persona(sNif, sNombre, sApellidos, sDireccion){
     this.nombre = sNombre;
     this.apellidos = sApellidos;
     this.direccion = sDireccion;
+
 }
 
 
@@ -21,7 +22,7 @@ Persona.prototype.toHTMLRow = function (){
 
 
 // Clase Conductor
-function Conductor(dCadCarnet){
+function Conductor(sNif, sNombre, sApellidos, sDireccion, dCadCarnet){
     Persona.call(this,sNif,sNombre,sApellidos,sDireccion);
 	this.cadCarnet = dCadCarnet;
 }
@@ -75,18 +76,26 @@ GuardiaCivil.prototype.toHTMLRow = function (){
 // Clase DGT
 class Dgt {
     constructor() {
-      this.personas = [];
+      this.personas = new Array;
       this.multas = [];
     }
 
     comprobarConductor(per){
-        personas.forEach(element => {
+
+        if(this.personas.length==0){
+            this.personas.push(per);
+            alert("creado");
+        }
+        else{
+        this.personas.forEach(element => {
             if(element.nif==per.nif)
-                alert("Ya existe")
+                alert("Ya existe");
                 else{
-                this.personas.push(per);
-                alert("Se ha creado")}
-        });
+                    this.personas.push(per);
+                    alert("creado");
+                }
+            });
+        }
     }
 }
 

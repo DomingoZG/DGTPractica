@@ -26,14 +26,16 @@ function altaMulta() {
 }
 
 function añadeConductor(){
-  let nif = document.getElementById("txtNif");
-  let nombre = document.getElementById("txtNombre");
-  let apellido = document.getElementById("txtApellido");
-  let direccion = document.getElementById("txtDireccion");
-  let cadCarnet = document.getElementById("txtCaducidad");
-
-  let conductor = new Conductor(nif, nombre, apellido, direccion,cadCarnet);
-
+  
+  let nif = document.getElementById("txtNif").value;
+  let nombre = document.getElementById("txtNombre").value;
+  let apellido = document.getElementById("txtApellido").value;
+  let direccion = document.getElementById("txtDireccion").value;
+  let cadCarnet = document.getElementById("txtCaducidad").value;
+ 
+  let conductor = new Conductor(nif, nombre, apellido, direccion, cadCarnet);
+ 
+ 
   dgt.comprobarConductor(conductor);
 }
 /*
