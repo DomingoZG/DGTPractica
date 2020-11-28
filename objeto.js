@@ -139,7 +139,7 @@ class Dgt {
 
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
-
+//
     // Obtenemos array que no tiene productos con 0 unidades
     //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
 
