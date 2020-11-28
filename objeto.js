@@ -7,7 +7,7 @@ function Persona(sNif, sNombre, sApellidos, sDireccion){
     this.direccion = sDireccion;
 }
 
-/* toHTMLRow de Persona
+
 Persona.prototype.toHTMLRow = function (){
     let sFila = "<tr>";
     sFila += "<td>" + this.nif + "</td>";
@@ -18,7 +18,7 @@ Persona.prototype.toHTMLRow = function (){
 
     return sFila;
 }
-*/
+
 
 // Clase Conductor
 function Conductor(dCadCarnet){
@@ -48,6 +48,14 @@ else {
 	GuardiaCivil.prototype = new Persona();   // Forma antigua
 } 
 
+// Clase DGT
+class Dgt {
+    constructor() {
+      this.personas = [];
+      this.multas = [];
+    }
+}
+
 // Clase Multa
 class Multa{
     constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha){
@@ -59,6 +67,21 @@ class Multa{
     this.descripcion = sDescripcion;
     this.fecha = dFecha;
     }
+    toHTMLRow(){
+        let sFila = "<tr>";
+    sFila += "<td>" + this.idMulta + "</td>";
+    sFila += "<td>" + this.nifConductor + "</td>";
+    sFila += "<td>" + this.nifGuardia + "</td>";
+    sFila += "<td>" + this.importe + "</td>";
+    sFila += "<td>" + this.pagada + "</td>";
+    sFila += "<td>" + this.descripcion + "</td>";
+    sFila += "<td>" + this.fecha + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
+    }
+
+    
         /*
     get idMulta(){
         return this.idMulta;
@@ -116,7 +139,7 @@ class Multa{
         this.fecha = dFecha;
     }
         */
-}
+    }
 
 // Clase Grave
 class Grave extends Multa{
