@@ -128,7 +128,7 @@ class Dgt {
    
    listadoConductor(){
 
-    let sTabla = "<table border='1' class='table'>";    
+    let sTabla = "<table border='1'  class='table'>";    
 
     // Encabezado de la tabla
     sTabla += "<thead class='thead-light'><tr>";
