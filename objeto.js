@@ -80,7 +80,7 @@ GuardiaCivil.prototype.toHTMLRow = function (){
 class Dgt {
     constructor() {
       this.personas = new Array;
-      this.multas = [];
+      this.multas = new Array;
     }
   
      sumaConductor(cond){
