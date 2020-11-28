@@ -51,9 +51,9 @@ Conductor.prototype.toHTMLRow = function (){
 
 
 // Clase GuardiaCivil
-function GuardiaCivil(sNif, sNombre, sApellidos, sDireccion, sPuesto){
-    Persona.call(this,sNif,sNombre,sApellidos,sDireccion); 
-	this.puesto = sPuesto;
+function GuardiaCivil(sNif, sNombre, sApellidos, sPuesto, sDireccion){
+    Persona.call(this,sNif,sNombre,sApellidos,sDireccion,this); 
+	this.sPuesto = sPuesto;
 }
 
 if (Object.create){
