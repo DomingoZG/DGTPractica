@@ -34,6 +34,18 @@ else {
 	Conductor.prototype = new Persona();   // Forma antigua
 }
 
+Conductor.prototype.toHTMLRow = function (){
+    let sFila = "<tr>";
+    sFila += "<td>" + this.nif + "</td>";
+    sFila += "<td>" + this.nombre + "</td>";
+    sFila += "<td>" + this.apellidos + "</td>";
+    sFila += "<td>" + this.direccion + "</td>";
+    sFila += "<td>" + this.cadCarnet + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
+}
+
 // Clase GuardiaCivil
 function GuardiaCivil(sPuesto){
     Persona.call(this,sNif,sNombre,sApellidos,sDireccion); 
@@ -47,6 +59,18 @@ if (Object.create){
 else {
 	GuardiaCivil.prototype = new Persona();   // Forma antigua
 } 
+
+GuardiaCivil.prototype.toHTMLRow = function (){
+    let sFila = "<tr>";
+    sFila += "<td>" + this.nif + "</td>";
+    sFila += "<td>" + this.nombre + "</td>";
+    sFila += "<td>" + this.apellidos + "</td>";
+    sFila += "<td>" + this.direccion + "</td>";
+    sFila += "<td>" + this.puesto + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
+}
 
 // Clase DGT
 class Dgt {
@@ -143,9 +167,24 @@ class Multa{
 
 // Clase Grave
 class Grave extends Multa{
-    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha,iPuntos){
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha, iPuntos){
         super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha)
         this.puntos = this.iPuntos;
+    }
+
+    toHTMLRow(){
+        let sFila = "<tr>";
+    sFila += "<td>" + this.idMulta + "</td>";
+    sFila += "<td>" + this.nifConductor + "</td>";
+    sFila += "<td>" + this.nifGuardia + "</td>";
+    sFila += "<td>" + this.importe + "</td>";
+    sFila += "<td>" + this.pagada + "</td>";
+    sFila += "<td>" + this.descripcion + "</td>";
+    sFila += "<td>" + this.fecha + "</td>";
+    sFila += "<td>" + this.puntos + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
     }
 	
 }
@@ -154,6 +193,21 @@ class Leve extends Multa{
     constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha,bBonificada){
         super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha);
         this.bonificada = bBonificada;
+    }
+
+    toHTMLRow(){
+        let sFila = "<tr>";
+    sFila += "<td>" + this.idMulta + "</td>";
+    sFila += "<td>" + this.nifConductor + "</td>";
+    sFila += "<td>" + this.nifGuardia + "</td>";
+    sFila += "<td>" + this.importe + "</td>";
+    sFila += "<td>" + this.pagada + "</td>";
+    sFila += "<td>" + this.descripcion + "</td>";
+    sFila += "<td>" + this.fecha + "</td>";
+    sFila += "<td>" + this.bonificada + "</td>";
+    sFila += "</tr>";
+
+    return sFila;
     }
     
 	
