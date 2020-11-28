@@ -37,6 +37,12 @@ function añadeConductor(){
  
  
   dgt.comprobarConductor(conductor);
+  if(dgt.comprobarConductor(conductor)){
+    alert("Ya existe");
+  }else{
+    dgt.sumaConductor(conductor);
+    alert("Creado");
+  }
   formConductor.reset();
 }
 /*
