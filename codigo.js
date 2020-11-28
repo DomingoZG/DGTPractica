@@ -72,7 +72,15 @@ function añadeGuardia(){
 }
 
 
+<<<<<<< HEAD
 function mostrarTabla()
+=======
+
+
+
+/*
+function ocultar() 
+>>>>>>> af7444027c46e12c43aa7d31a188905798c3004b
 {
   let sListado= dgt.productosPorCodigo();
   let oVentana = open();
