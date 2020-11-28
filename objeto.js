@@ -126,7 +126,7 @@ class Dgt {
    }
 
    
-   listadoConductor(){
+   listadoConductor(opcion){
 
     let sTabla = "<table border='1'  class='table'>";    
 
@@ -134,10 +134,10 @@ class Dgt {
     sTabla += "<thead class='thead-dark'><tr>";
     
     sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
-    sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
+    sTabla += "<th scope='col'>Apellido</th>";
+    sTabla +="<th scope='col'>Direccion</th>";
     sTabla += "<th scope='col'>Caducidad</th>";
     sTabla += "</tr></thead>";
-
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
 
@@ -149,6 +149,7 @@ class Dgt {
     
     for (let oP of dgt.personas)
     {
+        
         sTabla += oP.toHTMLRow();
     }
 
