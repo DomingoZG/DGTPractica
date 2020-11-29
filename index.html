@@ -55,8 +55,8 @@
               Listado
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" value="conductor" onclick= 'mostrarTabla("conductor")'; >Listado Básico Conductor </a>
-              <a class="dropdown-item" href="#" value="guardia"  onclick= 'mostrarTabla("guardia")'; >Listado Básico Guardia </a>
+              <a class="dropdown-item" href="#" value="conductor" onclick= 'mostrarTablaConductor()'; >Listado Básico Conductor </a>
+              <a class="dropdown-item" href="#" value="guardia"  onclick= 'mostrarTablaGuardia()'; >Listado Básico Guardia </a>
               <a class="dropdown-item" href="#">Listado Saldo Conductor</a>
               <a class="dropdown-item" href="#">Listado Puntos Conductor </a>
               <a class="dropdown-item" href="#">Listado Multas por Guardia </a>
@@ -198,7 +198,7 @@
                 <div class="form-group row">
                   <label for="txtFecha" class="col-4 col-form-label">Fecha:</label> 
                   <div class="col-8">
-                    <input id="txtFecha" name="txtFecha" type="text" class="form-control">
+                    <input id="txtFecha" name="txtFecha" type="date" class="form-control">
                   </div>
                 </div> 
                 <div class="form-group row">

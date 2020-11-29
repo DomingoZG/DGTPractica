@@ -53,7 +53,7 @@ Conductor.prototype.toHTMLRow = function (){
 // Clase GuardiaCivil
 function GuardiaCivil(sNif, sNombre, sApellidos, sPuesto, sDireccion){
     Persona.call(this,sNif,sNombre,sApellidos,sDireccion,this); 
-	this.sPuesto = sPuesto;
+	this.puesto = sPuesto;
 }
 
 if (Object.create){
@@ -140,16 +140,36 @@ class Dgt {
     sTabla += "</tr></thead>";
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
-
-    // Obtenemos array que no tiene productos con 0 unidades
-    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
-
-        // Obtenemos array ordenado por código de producto
-        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
     for (let oP of dgt.personas)
     {
-        
+        if(oP.cadCarnet!=null)
+        sTabla += oP.toHTMLRow();
+    }
+
+    sTabla += "</tbody>";
+
+    return sTabla;
+}
+
+listadoGuardia(){
+
+    let sTabla = "<table border='1'  class='table'>";    
+
+    // Encabezado de la tabla
+    sTabla += "<thead class='thead-dark'><tr>";
+    
+    sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
+    sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
+    sTabla += "<th scope='col'>Puesto</th>";
+    sTabla += "</tr></thead>";
+
+    // Contenido de la tabla
+    sTabla += "<tbody scope='row'>";
+
+    for (let oP of dgt.personas)
+    {
+        if(oP.cadCarnet==null)
         sTabla += oP.toHTMLRow();
     }
 
