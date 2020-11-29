@@ -236,18 +236,16 @@ listadoGuardiaSaldo()
 
     sTabla += "<tbody scope='row'>";
 
-    let oConductor= this.personas.filter(oP => oP instanceof Multa)
-
-    for (let i = 0; i < oConductor.length; i++) {
-        sTabla += oConductor[i].toHTMLrow();
+    for(let oP of dgt.conuctor)
+    {
+        if(oP.fImporte==null)
+        sTabla += oP.toHTMLRow();
     }
+  
     sTabla += "</tbody>";
 
     return sTabla;
        
-
-
-
 
 }
 
