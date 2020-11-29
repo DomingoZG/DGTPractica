@@ -38,21 +38,16 @@ if(formMulta.radioMulta_1.checked){
 function añadeMulta(){
   let id = document.getElementById("txtIdMulta").value;
   let nifConductor = document.getElementById("txtNifConductor").value;
-  let nifGuardia = document.getElementById("txtNifGuardia").value;
+  let nifGuardia = document.getElementById("txtNifGuardiaM").value;
   let importe = document.getElementById("txtImporte").value;
   let descripcion = document.getElementById("txtDescripcion").value;
   let fecha = document.getElementById("txtFecha").value;
-  alert(id);
-  alert(nifConductor);
-  alert(nifGuardia);
-  alert(importe);
-  alert(descripcion);
-  alert(fecha);
+
 
   
   if(formMulta.radioMulta_1.checked){
     let puntos = document.getElementById("txtPunto").value;
-    let multa = new Grave(id, nifConductor, nifGuardia, importe, descripcion, fecha, puntos);
+    let multa = new Grave(id, nifConductor, nifGuardia, importe, false, descripcion, fecha, puntos);
       if(dgt.comprobarMulta(multa)){
         alert("La multa ya existe");
       }else{
@@ -61,7 +56,8 @@ function añadeMulta(){
       }
       
   }else{
-      let multa = new Leve(id, nifConductor, nifGuardia, importe, descripcion, fecha, formMulta.radio_0.checked);
+      var multa = new Leve(id, nifConductor, nifGuardia, importe, false, descripcion, fecha, formMulta.radio_0.checked);
+
     if(dgt.comprobarMulta(multa)){
       alert("La multa ya existe");
     }else{
