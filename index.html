@@ -46,11 +46,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" onclick=altaMulta();>Registrar multa </a>
-
-
-              <a class="dropdown-item" href="#" onclick=altaPagarMulta();>Pagar multa</a>
-
-              <a class="dropdown-item" href="#" >Imprimir multa </a>        
+              <a class="dropdown-item" href="#">Pagar multa</a>
+              <a class="dropdown-item" href="#">Imprimir multa </a>        
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -195,11 +192,11 @@
                   <div class="col-8" style="display: flex;">
 
                     <div class="col-8">
-                      <input name="radioMulta" id="radioMulta_0" type="radio" class="custom-control-input" value="leve" checked> 
+                      <input name="radioMulta" id="radioMulta_0" type="radio" class="custom-control-input" onclick="seleccionado();" value="leve"> 
                       <label for="radioMulta_0" class="custom-control-label">Leve</label>
                     </div>
                     <div class="col-8">                    
-                      <input name="radioMulta" id="radioMulta_1" type="radio" class="custom-control-input" value="grave"> 
+                      <input name="radioMulta" id="radioMulta_1" type="radio" class="custom-control-input" onclick="seleccionado();" value="grave"> 
                       <label for="radioMulta_1" class="custom-control-label">Grave</label>
                     </div>
                   </div>
@@ -243,31 +240,12 @@
                 </div> 
                 <div class="form-group row">
                   <div class="offset-4 col-8">
-                    <button name="submit" type="button" class="btn btn-primary">Añadir</button>
+                    <button name="submit" type="submit" class="btn btn-primary">Añadir</button>
                   </div>
                 </div>
               </form>
               </div>
 
-              <div id="divPagarMulta"  class="container col-6 ">
-                <form action="" name="formPagarMulta" class="m-2" id="formPagarMulta">
-                  <div class="form-group row">
-                    <label for="idMulta" class="col-4 col-form-label">Identificador Multa</label> 
-                    <div class="col-8">
-                      <div class="input-group">
-                    
-                        <input id="idMulta" name="idMulta" type="text" required="required" class="form-control">
-                      </div>
-                    </div>
-                  </div> 
-                  <div class="form-group row">
-                    <div class="offset-4 col-8">
-                      <button name="submit" type="button" class="btn btn-primary" onclick="">Enviar</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-                
            
               
 
