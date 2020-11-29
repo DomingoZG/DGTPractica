@@ -1,3 +1,4 @@
+
 "use strict";
 // Clase Persona
 function Persona(sNif, sNombre, sApellidos, sDireccion){
@@ -112,8 +113,6 @@ class Dgt {
        let existe = false;
 
        if(this.personas.length==0){
-           this.personas.push(per);
-           existe = true;
            return existe;
        }else{
        this.personas.forEach(element => {
@@ -134,8 +133,6 @@ comprobarMulta(multa){
    let existe = false;
 
    if(this.multas.length==0){
-       this.multas.push(multa);
-       existe = true;
        return existe;
    }else{
    this.multas.forEach(element => {
