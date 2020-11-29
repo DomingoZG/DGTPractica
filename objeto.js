@@ -236,11 +236,11 @@ listadoGuardiaSaldo()
 
     sTabla += "<tbody scope='row'>";
 
-    for(let oP of dgt.conductor)
-    {
-        if(oP.fImporte==null)
-        sTabla += oP.toHTMLRow();
-    }
+    //for(let oP of dgt.conductor)
+    //{
+    //    if(oP.fImporte==null)
+    //    sTabla += oP.toHTMLRow();
+    //}
   
     sTabla += "</tbody>";
 
