@@ -77,6 +77,10 @@ function añadeGuardia(){
   formGuardia.reset();
 }
 
+
+
+
+//////////////////////// LISTADOS //////////////////////////////////
 function mostrarTablaConductor(){
 
   let sListado = dgt.listadoConductor();
