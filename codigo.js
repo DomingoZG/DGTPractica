@@ -133,7 +133,7 @@ function pagarMulta(){
     alert("No existe multa!")
     document.getElementById("pagar").style.display = "none";
   }else{
-    dgt.pagarMulta(id)
+    dgt.pagarMulta(id);
     document.getElementById("pagar").style.display = "block";
     formPagarMulta.reset();
   }
