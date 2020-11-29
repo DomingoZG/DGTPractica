@@ -28,7 +28,7 @@ function altaMulta() {
   
 }
 
-function altaPagarMulta();{
+function altaPagarMulta(){
   formConductor.style.display = "none";
   formGuardia.style.display = "none";
   formMulta.style.display = "none";
