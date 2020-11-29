@@ -226,6 +226,31 @@ listadoGuardia(){
     return sTabla;
 }
 
+listadoGuardiaSaldo()
+{
+    let sTabla ="<table border='1' class='table'>";
+
+    sTabla += "<thead class='thead-dark'><tr>";
+    sTabla += "<th>NIF</th><th>Saldo Pendiente</th>";
+    sTabla += "</tr></thead>";
+
+    sTabla += "<tbody scope='row'>";
+
+    let oConductor= this.personas.filter(oP => oP instanceof Multa)
+
+    for (let i = 0; i < oConductor.length; i++) {
+        sTabla += oConductor[i].toHTMLrow();
+    }
+    sTabla += "</tbody>";
+
+    return sTabla;
+       
+
+
+
+
+}
+
 
 }
 

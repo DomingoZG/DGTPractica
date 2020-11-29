@@ -160,5 +160,14 @@ function mostrarTablaConductor(){
     oVentana.document.body.innerHTML=sListado;
     oVentana.document.write('</body></html>');
     }
+
+    function mostrarTablaSaldo()
+    {
+      let sListado = dgt.listadoGuardiaSaldo();
+      let oVentana = open();
+      oVentana.document.body.innerHTML=sListado;
+
+
+    }
   
 
