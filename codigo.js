@@ -58,7 +58,7 @@ function añadeMulta(){
   
   if(formMulta.radioMulta_1.checked){
     let puntos = document.getElementById("txtPunto").value;
-    let multa = new Grave(id, nifConductor, nifGuardia, importe, false, descripcion, fecha, puntos);
+    let multa = new Grave(id, nifConductor, nifGuardia, importe, descripcion, fecha, puntos);
       if(dgt.comprobarMulta(multa)){
         alert("La multa ya existe");
       }else{
@@ -67,7 +67,7 @@ function añadeMulta(){
       }
       
   }else{
-      var multa = new Leve(id, nifConductor, nifGuardia, importe, false, descripcion, fecha, formMulta.radio_0.checked);
+      var multa = new Leve(id, nifConductor, nifGuardia, importe, descripcion, fecha, formMulta.radio_0.checked);
 
     if(dgt.comprobarMulta(multa)){
       alert("La multa ya existe");
