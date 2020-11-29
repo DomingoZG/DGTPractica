@@ -15,14 +15,11 @@ function altaGuardiaCivil() {
   formGuardia.style.display = "block";
   formMulta.style.display = "none";
     
-
 }
 function altaMulta() {
   formConductor.style.display = "none";
   formGuardia.style.display = "none";
   formMulta.style.display = "block";
-    
-
 }
 
 function añadeConductor(){
@@ -89,4 +86,5 @@ function mostrarTablaConductor(){
     oVentana.document.write('</body></html>');
     }
   
+
 
