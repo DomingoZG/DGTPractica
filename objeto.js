@@ -145,21 +145,21 @@ comprobarMulta(multa){
 }
 
     pagarMulta(id){
-        
+        let pag = false;
         this.multas.forEach(element => {
             if(element.idMulta==id){
                
                 if(element.pagada == false){
                     element.pagada = true ;
-                    
-                    
-                }
+                    pag = element.pagada;
+
+                }else
+                    return pag;
             }
-            
-            
+ 
         });
         
-
+        return pag;
     }
    
    listadoConductor(){

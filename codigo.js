@@ -133,9 +133,13 @@ function pagarMulta(){
     alert("No existe multa!")
     document.getElementById("pagar").style.display = "none";
   }else{
-    dgt.pagarMulta(id)
-    document.getElementById("pagar").style.display = "block";
-    formPagarMulta.reset();
+    if(dgt.pagarMulta(id)){
+      document.getElementById("pagar").style.display = "block";
+      formPagarMulta.reset();
+    }else{
+      alert("Esa multa ya ha sido Pagada");
+      document.getElementById("pagar").style.display = "none";
+    }
   }
 }
 
