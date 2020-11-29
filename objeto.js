@@ -136,7 +136,7 @@ comprobarMulta(multa){
        return existe;
    }else{
    this.multas.forEach(element => {
-       if(element.idMulta==multa.iIdMulta)
+       if(element.idMulta==multa.idMulta)
            existe = true;
        });
    }
