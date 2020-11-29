@@ -7,28 +7,71 @@ function altaConductor() {
   formConductor.style.display = "block";
   formGuardia.style.display = "none";
   formMulta.style.display = "none";
-  formPagarMulta.style.display = "none";
-  
-  
+    
+
 }
 function altaGuardiaCivil() {
   formConductor.style.display = "none";
   formGuardia.style.display = "block";
   formMulta.style.display = "none";
-  formPagarMulta.style.display = "none";
-  
+    
+
 }
 function altaMulta() {
   formConductor.style.display = "none";
   formGuardia.style.display = "none";
   formMulta.style.display = "block";
-  formPagarMulta.style.display = "none";
+    
+
 }
-function altaPagarMulta(){
-  formConductor.style.display = "none";
-  formGuardia.style.display = "none";
-  formMulta.style.display = "none";
-  formPagarMulta.style.display = "block";
+
+function seleccionado(){
+if(formMulta.radioMulta_1.checked){
+  document.getElementById("bonificacion").style.display = "none";
+  document.getElementById("puntos").style = "flex";
+}else{
+  document.getElementById("puntos").style.display = "none";
+  document.getElementById("bonificacion").style.display = "flex";
+}
+}
+
+function añadeMulta(){
+  let id = document.getElementById("txtIdMulta").value;
+  let nifConductor = document.getElementById("txtNifConductor").value;
+  let nifGuardia = document.getElementById("txtNifGuardia").value;
+  let importe = document.getElementById("txtImporte").value;
+  let descripcion = document.getElementById("txtDescripcion").value;
+  let fecha = document.getElementById("txtFecha").value;
+  alert(id);
+  alert(nifConductor);
+  alert(nifGuardia);
+  alert(importe);
+  alert(descripcion);
+  alert(fecha);
+
+  
+  if(formMulta.radioMulta_1.checked){
+    let puntos = document.getElementById("txtPunto").value;
+    let multa = new Grave(id, nifConductor, nifGuardia, importe, descripcion, fecha, puntos);
+      if(dgt.comprobarMulta(multa)){
+        alert("La multa ya existe");
+      }else{
+      dgt.sumaMulta(multa);
+      alert("Multa creada");
+      }
+      
+  }else{
+      let multa = new Leve(id, nifConductor, nifGuardia, importe, descripcion, fecha, formMulta.radio_0.checked);
+    if(dgt.comprobarMulta(multa)){
+      alert("La multa ya existe");
+    }else{
+      dgt.sumaMulta(multa);
+      alert("Multa creada");
+    }
+  }
+    
+  
+  
 }
 
 function añadeConductor(){
@@ -42,8 +85,7 @@ function añadeConductor(){
   let conductor = new Conductor(nif, nombre, apellido, direccion, cadCarnet);
  
   //Compruebo Conductor en DGT
-  dgt.comprobarConductor(conductor);
-
+  
   if(dgt.comprobarConductor(conductor)){
     alert("Ya existe");
   }else{
@@ -64,8 +106,7 @@ function añadeGuardia(){
  
   let guardia = new GuardiaCivil(nif, nombre, apellido, puesto, direccion);
  
- 
-  dgt.comprobarGuardia(guardia);
+
 
   if(dgt.comprobarGuardia(guardia)){
     alert("Ya existe");
@@ -77,10 +118,6 @@ function añadeGuardia(){
   formGuardia.reset();
 }
 
-
-
-
-//////////////////////// LISTADOS //////////////////////////////////
 function mostrarTablaConductor(){
 
   let sListado = dgt.listadoConductor();
@@ -99,5 +136,4 @@ function mostrarTablaConductor(){
     oVentana.document.write('</body></html>');
     }
   
-
 

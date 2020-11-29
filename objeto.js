@@ -125,6 +125,28 @@ class Dgt {
        return existe;
    }
 
+   sumaMulta(multa){
+    this.multas.push(multa);
+}
+
+comprobarMulta(multa){
+
+   let existe = false;
+
+   if(this.multas.length==0){
+       this.multas.push(multa);
+       existe = true;
+       return existe;
+   }else{
+   this.multas.forEach(element => {
+       if(element.idMulta==multa.iIdMulta)
+           existe = true;
+       });
+   }
+
+   return existe;
+}
+
    
    listadoConductor(){
 
@@ -134,12 +156,18 @@ class Dgt {
     sTabla += "<thead class='thead-dark'><tr>";
     
     sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
-    sTabla += "<th scope='col'>Apellido</th>";
-    sTabla +="<th scope='col'>Direccion</th>";
+    sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
     sTabla += "<th scope='col'>Caducidad</th>";
     sTabla += "</tr></thead>";
+
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
+
+    // Obtenemos array que no tiene productos con 0 unidades
+    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
+
+        // Obtenemos array ordenado por código de producto
+        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
     for (let oP of dgt.personas)
     {
@@ -167,6 +195,12 @@ listadoGuardia(){
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
 
+    // Obtenemos array que no tiene productos con 0 unidades
+    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
+
+        // Obtenemos array ordenado por código de producto
+        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
+    
     for (let oP of dgt.personas)
     {
         if(oP.cadCarnet==null)
