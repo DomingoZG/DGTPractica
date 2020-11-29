@@ -110,11 +110,11 @@ function añadeGuardia(){
   let apellido = document.getElementById("txtApellidoGuardia").value;
   let puesto = document.getElementById("txtPuesto").value;
   let direccion = document.getElementById("txtDireccion").value;
- 
+  
   let guardia = new GuardiaCivil(nif, nombre, apellido, puesto, direccion);
- 
-
-
+  
+  
+  
   if(dgt.comprobarGuardia(guardia)){
     alert("Ya existe");
   }else{
@@ -123,6 +123,20 @@ function añadeGuardia(){
   }
   
   formGuardia.reset();
+}
+
+function pagarMulta(){
+  let id = formPagarMulta.idMulta.value.trim();
+
+  let multa = new Multa(id, null, null,null,null,null,null);
+  if(!dgt.comprobarMulta(multa)){
+    alert("No existe multa!")
+    document.getElementById("pagar").style.display = "none";
+  }else{
+    dgt.pagarMulta(id)
+    document.getElementById("pagar").style.display = "block";
+    formPagarMulta.reset();
+  }
 }
 
 function mostrarTablaConductor(){

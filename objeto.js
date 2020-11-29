@@ -144,6 +144,23 @@ comprobarMulta(multa){
    return existe;
 }
 
+    pagarMulta(id){
+        
+        this.multas.forEach(element => {
+            if(element.idMulta==id){
+               
+                if(element.pagada == false){
+                    element.pagada = true ;
+                    
+                    
+                }
+            }
+            
+            
+        });
+        
+
+    }
    
    listadoConductor(){
 
