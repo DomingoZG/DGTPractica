@@ -49,16 +49,10 @@ if(formMulta.radioMulta_1.checked){
 function añadeMulta(){
   let id = document.getElementById("txtIdMulta").value;
   let nifConductor = document.getElementById("txtNifConductor").value;
-  let nifGuardia = document.getElementById("txtNifGuardia").value;
+  let nifGuardia = formMulta.txtNifGuardia.value.trim();
   let importe = document.getElementById("txtImporte").value;
   let descripcion = document.getElementById("txtDescripcion").value;
   let fecha = document.getElementById("txtFecha").value;
-  alert(id);
-  alert(nifConductor);
-  alert(nifGuardia);
-  alert(importe);
-  alert(descripcion);
-  alert(fecha);
 
   
   if(formMulta.radioMulta_1.checked){
@@ -82,7 +76,7 @@ function añadeMulta(){
   }
     
   
-  
+  formMulta.reset();
 }
 
 function añadeConductor(){
