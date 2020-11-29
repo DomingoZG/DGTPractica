@@ -299,8 +299,8 @@ class Multa{
 
 // Clase Grave
 class Grave extends Multa{
-    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha, iPuntos){
-        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha)
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, sDescripcion, dFecha, iPuntos){
+        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, sDescripcion, dFecha)
         this.puntos = iPuntos;
     }
 
@@ -322,8 +322,8 @@ class Grave extends Multa{
 }
 // Clase Leve
 class Leve extends Multa{
-    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha,bBonificada){
-        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, bPagada, sDescripcion, dFecha);
+    constructor(iIdMulta, sNifConductor, sNifGuardia, fImporte, sDescripcion, dFecha,bBonificada){
+        super(iIdMulta, sNifConductor, sNifGuardia, fImporte, sDescripcion, dFecha);
         this.bonificada = bBonificada;
     }
 
