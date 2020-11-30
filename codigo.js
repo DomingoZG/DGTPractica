@@ -208,7 +208,7 @@ function mostrarTablaConductor(){
     });
     
     doc.text(20, 30, window.open("plantilla.html", "Multa"));
-    
+    doc.addPage();
     
     // Save the PDF
     doc.save('Multa.pdf');
