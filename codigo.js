@@ -17,7 +17,7 @@ function datosIniciales() {
     dgt.sumaMulta(new Leve(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13"));
     dgt.sumaMulta(new Leve(400, "5555", "5138", 500, "Borrachera", "2020-9-15"));
 
-    dgt.sumaMulta(new Grave(3333,"4447","6666",50,true,"Aparcamiento","2020-10-10",15));
+    dgt.sumaMulta(new Grave(3333,"4447","6666",50,"Aparcamiento","2020-10-10",15));
 
 
 }
@@ -210,7 +210,7 @@ function mostrarTablaConductor(){
     });
     
     let oVentana = window.open("plantilla.html", "Multa");
-    oVentana.write(comprobarMulta(sTabla));
+    oVentana.write(listadoMulta());
     
     // Save the PDF
     doc.save('Multa.pdf');

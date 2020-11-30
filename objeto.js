@@ -178,9 +178,8 @@ comprobarMulta(multa){
         sTabla += "<tbody scope='row'>";
     
         
-        for (let oP of dgt.multas)
+        for (let oP of dgt.personas)
         {
-            if(oP.cadCarnet!=null)
             sTabla += oP.toHTMLRow();
         }
     
