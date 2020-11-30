@@ -225,7 +225,7 @@ listadoGuardia(){
 
     return sTabla;
 }
-/// SALE VACIO MIRAR MAÑANA ME HE VENIDO ARRIBA Y ME HE COMIDO UN MOJON
+
 listadoConductorSaldo()
 {
     let sTabla ="<table border='1' class='table'>";
