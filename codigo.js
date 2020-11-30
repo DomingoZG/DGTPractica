@@ -171,5 +171,26 @@ function mostrarTablaConductor(){
 
 
     }
+  function generarPDF(){
+    var doc = new jsPDF({
+      orientation: 'landscape'
+  });
+
   
+  // abrirVentana.document.write("<a href='plantilla.html' target='_blank'></a>");
+ 
+ 
+ 
+  // let meter = $("#content").html("plantilla.html");
+  doc.text(20, 20, window.open("plantilla.html","Imprimir Multa", "width=300, height=200"));
+  // // doc.text(20, 30, 'Vamos a generar un pdf desde el lado del cliente.');
+  
+  // // Add new page
+  // doc.addPage();
+  // doc.text(20, 20, 'Visita programacion.net');
+  
+  // // Save the PDF
+  doc.save('documento.pdf');
+
+  }
 
