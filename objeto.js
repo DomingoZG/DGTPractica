@@ -293,16 +293,32 @@ listadoConductorSaldo()
     sTabla += "</tr></thead>";
 
     sTabla += "<tbody scope='row'>";
+    this.personas.forEach(element1 => {
+        let nifCond="";
+        let puntos = 0;
+        if(element1.cadCarnet!=null){
+            this.multas.forEach(element2 => {
+                if(element1.nif==element2.nifConductor){
+                    if(!element2.pagada){
+                        if(element2.puntos!=null){
+                            nifCond = element2.nifConductor;
+                            puntos += parseFloat(element2.puntos);
+                        }
+                    }
+                }
+            });
+            if(nifCond!="" && puntos!=0){
+            sTabla += "<tr><td>" + nifCond + "</td>";
+            sTabla += "<td>" + puntos + "</td></tr>";
+        }
+        }
 
-
-    
-
+    });
 
 
     sTabla += "</tbody>";
 
     return sTabla;
-
 
  }
 

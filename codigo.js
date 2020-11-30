@@ -14,8 +14,10 @@ function datosIniciales() {
     dgt.sumaGuardia(new GuardiaCivil("8888", "Domingo", "Pardo", "Cabo", "Calle Arroz"));
 
 
-    dgt.sumaMulta(new Multa(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13"));
-    dgt.sumaMulta(new Multa(400, "5555", "5138", 500, "Borrachera", "2020-9-15"));
+    dgt.sumaMulta(new Leve(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13"));
+    dgt.sumaMulta(new Leve(400, "5555", "5138", 500, "Borrachera", "2020-9-15"));
+
+    dgt.sumaMulta(new Grave(3333,"4447","6666",50,true,"Aparcamiento","2020-10-10",15));
 
 
 }
