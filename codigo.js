@@ -1,6 +1,24 @@
 'use strict';
 
 var dgt = new Dgt();
+
+
+datosIniciales();
+
+
+function datosIniciales() {
+    dgt.sumaConductor(new Conductor("4447", "Alvaro", "Zujar", " Calle Mendez", "2022-10-13"));
+    dgt.sumaConductor(new Conductor("5555", "Alejandro", "Rojas", "Calle Pelado", "2023-4-10"));
+ 
+    dgt.sumaGuardia(new GuardiaCivil("6666", "Ezequiel", "Gomez", "Capitan", "Avenida Andalucia"));
+    dgt.sumaGuardia(new GuardiaCivil("8888", "Domingo", "Pardo", "Cabo", "Calle Arroz"));
+
+
+    dgt.sumaMulta(new Multa(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13"));
+    dgt.sumaMulta(new Multa(400, "5555", "5138", 500, "Borrachera", "2020-9-15"));
+
+
+}
 /* MOSTRAR LOS FORMULARIOS */
 
 function altaConductor() {
@@ -163,7 +181,7 @@ function mostrarTablaConductor(){
 
     function mostrarTablaSaldo()
     {
-      let sListado = dgt.listadoGuardiaSaldo();
+      let sListado = dgt.listadoConductorSaldo();
       let oVentana = open();
       oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
@@ -171,26 +189,32 @@ function mostrarTablaConductor(){
 
 
     }
-  function generarPDF(){
-    var doc = new jsPDF({
-      orientation: 'landscape'
-  });
 
-  
-  // abrirVentana.document.write("<a href='plantilla.html' target='_blank'></a>");
- 
- 
- 
-  // let meter = $("#content").html("plantilla.html");
-  doc.text(20, 20, window.open("plantilla.html","Imprimir Multa", "width=300, height=200"));
-  // // doc.text(20, 30, 'Vamos a generar un pdf desde el lado del cliente.');
-  
-  // // Add new page
-  // doc.addPage();
-  // doc.text(20, 20, 'Visita programacion.net');
-  
-  // // Save the PDF
-  doc.save('documento.pdf');
+    function mostrarTablaPuntos()
+    {
+      let sListado = dgt.listadoPuntosConductor();
+      let oVentana = open();
+      oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+      oVentana.document.body.innerHTML=sListado;
+      oVentana.document.write('</body></html>');
 
-  }
+    }
+  
+
+    function generarPDF(){
+
+      var doc = new jsPDF({
+        orientation: 'landscape'
+    });
+    
+    doc.text(20, 30, window.open("plantilla.html", "Multa"));
+    
+    
+    // Save the PDF
+    doc.save('Multa.pdf');
+
+
+      
+    }
+  
 

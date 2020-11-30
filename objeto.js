@@ -252,8 +252,10 @@ listadoConductorSaldo()
                     }
                 }
             });
+            if(nifCond!="" && sueldo!=0){
             sTabla += "<tr><td>" + nifCond + "</td>";
             sTabla += "<td>" + sueldo + "</td></tr>";
+        }
         }
         
     });
@@ -265,6 +267,27 @@ listadoConductorSaldo()
        
 
 }
+ listadoPuntosConductor()
+ {
+    let sTabla ="<table border='1' class='table'>";
+
+    sTabla += "<thead class='thead-dark'><tr>";
+    sTabla += "<th>NIF</th><th>Puntos</th>";
+    sTabla += "</tr></thead>";
+
+    sTabla += "<tbody scope='row'>";
+
+
+    
+
+
+
+    sTabla += "</tbody>";
+
+    return sTabla;
+
+
+ }
 
 
 }
