@@ -207,8 +207,8 @@ function mostrarTablaConductor(){
         orientation: 'landscape'
     });
     
-    doc.text(20, 30, window.open("plantilla.html", "Multa"));
-    doc.addPage();
+    let oVentana = window.open("plantilla.html", "Multa");
+    oVentana.write(comprobarMulta(sTabla));
     
     // Save the PDF
     doc.save('Multa.pdf');
