@@ -225,7 +225,7 @@ listadoGuardia(){
 
     return sTabla;
 }
-
+/// SALE VACIO MIRAR MAÑANA ME HE VENIDO ARRIBA Y ME HE COMIDO UN MOJON
 listadoConductorSaldo()
 {
     let sTabla ="<table border='1' class='table'>";
@@ -252,8 +252,10 @@ listadoConductorSaldo()
                     }
                 }
             });
+            if(nifCond!="" && sueldo!=0){
             sTabla += "<tr><td>" + nifCond + "</td>";
             sTabla += "<td>" + sueldo + "</td></tr>";
+        }
         }
         
     });
