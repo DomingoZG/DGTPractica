@@ -177,11 +177,6 @@ comprobarMulta(multa){
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
 
-    // Obtenemos array que no tiene productos con 0 unidades
-    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
-
-        // Obtenemos array ordenado por código de producto
-        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
     for (let oP of dgt.personas)
     {
@@ -209,11 +204,6 @@ listadoGuardia(){
     // Contenido de la tabla
     sTabla += "<tbody scope='row'>";
 
-    // Obtenemos array que no tiene productos con 0 unidades
-    //let oProductosAux  = this.productos.filter( oProducto => oProducto.unidades > 0 );
-
-        // Obtenemos array ordenado por código de producto
-        //oProductosAux.sort(function (oP1,oP2){return oP1.codigo - oP2.codigo;});
     
     for (let oP of dgt.personas)
     {
