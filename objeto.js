@@ -161,7 +161,34 @@ comprobarMulta(multa){
         
         return pag;
     }
-   
+
+    listadoMulta(){
+
+        let sTabla = "<table border='1'  class='table colspan='2'>";    
+    
+        // Encabezado de la tabla
+        sTabla += "<thead class='thead-dark'><tr>";
+        
+        sTabla += "<th scope='col'>NIF</th><th scope='col'>Nombre</th>";
+        sTabla += "<th scope='col'>Apellido</th><th scope='col'>Direccion</th>";
+        sTabla += "<th scope='col'>Caducidad</th>";
+        sTabla += "</tr></thead>";
+    
+        // Contenido de la tabla
+        sTabla += "<tbody scope='row'>";
+    
+        
+        for (let oP of dgt.multas)
+        {
+            if(oP.cadCarnet!=null)
+            sTabla += oP.toHTMLRow();
+        }
+    
+        sTabla += "</tbody>";
+    
+        return sTabla;
+    }
+    
    listadoConductor(){
 
     let sTabla = "<table border='1'  class='table'>";    
