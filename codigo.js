@@ -10,12 +10,12 @@ function datosIniciales() {
     dgt.sumaConductor(new Conductor("4447", "Alvaro", "Zujar", " Calle Mendez", "2022-10-13"));
     dgt.sumaConductor(new Conductor("5555", "Alejandro", "Rojas", "Calle Pelado", "2023-4-10"));
  
-    dgt.sumaGuardia(new GuardiaCivil("6666", "Ezequiel", "Gomez", "Avda. Andalucia", "Capitan"));
-    dgt.sumaGuardia(new GuardiaCivil("8888", "Domingo", "Pardo", "Sevilla", "Cabo"));
+    dgt.sumaGuardia(new GuardiaCivil("6666", "Ezequiel", "Gomez", "Capitan", "Avenida Andalucia"));
+    dgt.sumaGuardia(new GuardiaCivil("8888", "Domingo", "Pardo", "Cabo", "Calle Arroz"));
 
 
-    dgt.sumaMulta(new Multa(200, "3333", "1973", 50, "Zona Prohibida", "2020-01-13"));
-    dgt.sumaMulta(new Multa(400, "9999", "5138", 500, "Borrachera", "2020-9-15"));
+    dgt.sumaMulta(new Multa(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13"));
+    dgt.sumaMulta(new Multa(400, "5555", "5138", 500, "Borrachera", "2020-9-15"));
 
 
 }
