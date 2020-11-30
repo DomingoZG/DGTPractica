@@ -163,7 +163,7 @@ function mostrarTablaConductor(){
 
     function mostrarTablaSaldo()
     {
-      let sListado = dgt.listadoGuardiaSaldo();
+      let sListado = dgt.listadoConductorSaldo();
       let oVentana = open();
       oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
