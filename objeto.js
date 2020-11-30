@@ -39,7 +39,7 @@ else {
 Conductor.prototype.toHTMLRow = function (){
     let sFila = "<tr>";
     sFila += "<td>" + this.nif + "</td>";
-    sFila += "<td>" + this.nombre + "</td>";
+    sFila += "<td>" + this.nombre + "</td>"; 
     sFila += "<td>" + this.apellidos + "</td>";
     sFila += "<td>" + this.direccion + "</td>";
     sFila += "<td>" + this.cadCarnet + "</td>";
@@ -226,7 +226,7 @@ listadoGuardia(){
     return sTabla;
 }
 /// SALE VACIO MIRAR MAÑANA ME HE VENIDO ARRIBA Y ME HE COMIDO UN MOJON
-listadoGuardiaSaldo()
+listadoConductorSaldo()
 {
     let sTabla ="<table border='1' class='table'>";
 
@@ -235,7 +235,23 @@ listadoGuardiaSaldo()
     sTabla += "</tr></thead>";
 
     sTabla += "<tbody scope='row'>";
-
+    this.personas.forEach(element1 => {
+        let nifCond="";
+        let sueldo = 0;
+        if(element1.cadCarnet!=null){
+            this.multas.forEach(element2 => {
+                if(element1.nif==element2.nifConductor){
+                    if(!element2.pagada){
+                        nifCond = element2.nifConductor;
+                        sueldo += parseFloat(element2.importe);
+                    }
+                }
+            });
+            sTabla += "<tr><td>" + nifCond + "</td>";
+            sTabla += "<td>" + sueldo + "</td></tr>";
+        }
+        
+    });
    
   
     sTabla += "</tbody>";
