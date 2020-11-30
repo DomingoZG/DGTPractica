@@ -243,7 +243,12 @@ listadoConductorSaldo()
                 if(element1.nif==element2.nifConductor){
                     if(!element2.pagada){
                         nifCond = element2.nifConductor;
-                        sueldo += parseFloat(element2.importe);
+                        if(element2.bonificada){
+                            let bon = parseFloat(element2.importe*0.25);
+                            sueldo += parseFloat(element2.importe)-bon;
+                        }else
+                            sueldo += parseFloat(element2.importe);
+
                     }
                 }
             });
