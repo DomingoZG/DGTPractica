@@ -321,6 +321,46 @@ listadoConductorSaldo()
 
  }
 
+ listadoMultasGuardia()
+ {
+    let sTabla ="<table border='1' class='table'>";
+
+    sTabla += "<thead class='thead-dark'><tr>";
+    sTabla += "<th>NIF</th><th>Nombre</th><th>Apellidos</th><th>Puesto</th><th>Multas</th><th>Importe Total</th>";
+    sTabla += "</tr></thead>";
+
+    sTabla += "<tbody scope='row'>";
+    this.personas.forEach(element1 => {
+        let totalImporte = 0;
+        let nMultas = 0;
+        if(element1.cadCarnet==null){
+            this.multas.forEach(element2 => {
+                if(element1.nif==element2.nifGuardia){
+                    totalImporte += parseFloat(element2.importe);
+                    nMultas++;
+                }
+            });
+            if(totalImporte!=0){
+            	sTabla += "<tr>";
+            	sTabla += "<td>" + element1.nif + "</td>";
+    			sTabla += "<td>" + element1.nombre + "</td>";
+    			sTabla += "<td>" + element1.apellidos + "</td>";
+    			sTabla += "<td>" + element1.puesto + "</td>";
+            	sTabla += "<td>" + nMultas + "</td>";
+            	sTabla += "<td>" + totalImporte + "</td>";
+            	sTabla += "</tr>";
+        }
+        }
+
+    });
+
+
+    sTabla += "</tbody>";
+
+    return sTabla;
+
+ }
+
 
 }
 

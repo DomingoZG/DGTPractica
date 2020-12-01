@@ -9,16 +9,18 @@ datosIniciales();
 function datosIniciales() {
     dgt.sumaConductor(new Conductor("4447", "Alvaro", "Zujar", " Calle Mendez", "2022-10-13"));
     dgt.sumaConductor(new Conductor("5555", "Alejandro", "Rojas", "Calle Pelado", "2023-4-10"));
+    dgt.sumaConductor(new Conductor("4444", "Juan", "Medina", "Calle Poleo", "2021-7-15"));
+    dgt.sumaConductor(new Conductor("7777", "Pedro", "Lopez", "Calle Menta", "2020-2-10"));
  
     dgt.sumaGuardia(new GuardiaCivil("6666", "Ezequiel", "Gomez", "Capitan", "Avenida Andalucia"));
     dgt.sumaGuardia(new GuardiaCivil("8888", "Domingo", "Pardo", "Cabo", "Calle Arroz"));
 
 
-    dgt.sumaMulta(new Leve(200, "4447", "1973", 50, "Zona Prohibida", "2020-01-13",true));
-    dgt.sumaMulta(new Leve(400, "5555", "5138", 500, "Borrachera", "2020-9-15",false));
+    dgt.sumaMulta(new Leve(200, "4447", "6666", 50, "Zona Prohibida", "2020-01-13",true));
+    dgt.sumaMulta(new Leve(400, "5555", "8888", 500, "Borrachera", "2020-9-15",false));
 
     dgt.sumaMulta(new Grave(2222,"4447","6666",50,"Zona Prohibida","2020-10-15",12));
-    dgt.sumaMulta(new Grave(3333,"8888","5555",70,"Aparcamiento","2020-10-10",15));
+    dgt.sumaMulta(new Grave(3333,"5555","8888",70,"Aparcamiento","2020-10-10",15));
 
 
 }
@@ -196,6 +198,16 @@ function mostrarTablaConductor(){
     function mostrarTablaPuntos()
     {
       let sListado = dgt.listadoPuntosConductor();
+      let oVentana = open();
+      oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+      oVentana.document.body.innerHTML=sListado;
+      oVentana.document.write('</body></html>');
+
+    }
+
+    function mostrarTablaMultasGuardia()
+    {
+      let sListado = dgt.listadoMultasGuardia();
       let oVentana = open();
       oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
