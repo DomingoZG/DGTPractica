@@ -170,7 +170,7 @@ function mostrarTablaConductor(){
 
   let sListado = dgt.listadoConductor();
   let oVentana = open();
-  oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+  oVentana.document.write('<html><head><title>Listado Básico Conductor!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
   oVentana.document.body.innerHTML=sListado;
   oVentana.document.write('</body></html>');
   }
@@ -179,7 +179,7 @@ function mostrarTablaConductor(){
 
     let sListado = dgt.listadoGuardia();
     let oVentana = open();
-    oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+    oVentana.document.write('<html><head><title>Listado Básico Guardia!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
     oVentana.document.body.innerHTML=sListado;
     oVentana.document.write('</body></html>');
     }
@@ -188,7 +188,7 @@ function mostrarTablaConductor(){
     {
       let sListado = dgt.listadoConductorSaldo();
       let oVentana = open();
-      oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+      oVentana.document.write('<html><head><title>Listado Saldo!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
       oVentana.document.write('</body></html>');
 
@@ -199,7 +199,7 @@ function mostrarTablaConductor(){
     {
       let sListado = dgt.listadoPuntosConductor();
       let oVentana = open();
-      oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+      oVentana.document.write('<html><head><title>Listado Puntos!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
       oVentana.document.write('</body></html>');
 
@@ -209,7 +209,7 @@ function mostrarTablaConductor(){
     {
       let sListado = dgt.listadoMultasGuardia();
       let oVentana = open();
-      oVentana.document.write('<html><head><title>Listado Básico!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
+      oVentana.document.write('<html><head><title>Listado Multas Guardia!</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></head><body>');
       oVentana.document.body.innerHTML=sListado;
       oVentana.document.write('</body></html>');
 
